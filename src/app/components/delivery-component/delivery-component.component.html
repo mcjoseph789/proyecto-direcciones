@@ -1,0 +1,26 @@
+<div class="form-group">
+    <form [formGroup]="formularioDireccion" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="calle">Calle: </label>
+            <select class="form-control" id="calle" formControlName="calle">
+                <option *ngFor="let calle of calles" [value]="calle">{{calle}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="numero">Numero: </label>
+            <input class="form-control" type="text" id="numero" formControlName="numero">
+        </div>
+        <div class="form-group">
+            <label for="casa">Casa: </label>
+            <input class="form-control" type="text" id="casa" formControlName="casa">
+        </div>
+        <div class="form-group">
+            <label for="detalle">Detalle: </label>
+            <input class="form-control" type="text" id="detalle" formControlName="detalle">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" type="submit">Guardar dirección</button>
+        </div>
+        <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Volver</a>
+    </form>
+</div>
