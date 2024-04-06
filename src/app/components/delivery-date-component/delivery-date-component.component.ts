@@ -21,6 +21,10 @@ export class DeliveryDateComponentComponent {
   ngOnInit() {
     console.log("ngOnInit de DeliveryDateComponent");
   }
+  
+  ngOnDestroy() {
+    console.log("limpiando DeliveryComponent");
+  }
 
   onSubmit() {
     this.fecha = new Fecha(

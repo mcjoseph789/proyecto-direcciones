@@ -5,6 +5,7 @@
             <select class="form-control" id="calle" formControlName="calle">
                 <option *ngFor="let calle of calles" [value]="calle">{{calle}}</option>
             </select>
+            <p>Usted seleccionó {{this.formularioDireccion.value.calle}}</p>
         </div>
         <div class="form-group">
             <label for="numero">Numero: </label>
